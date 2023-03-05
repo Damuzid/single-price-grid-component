@@ -7,7 +7,7 @@
 <div align="center">
 
 [Live](https://damuzid.github.io/single-price-grid-component/)
-| [Solution]()
+| [Solution](https://damuzid.github.io/single-price-grid-component/)
 | [Challenge](https://www.frontendmentor.io/challenges/single-price-grid-component-5ce41129d0ff452fec5abbbc)
 
 Solution for a challenge from [frontendmentor.io](https://www.frontendmentor.io/)
