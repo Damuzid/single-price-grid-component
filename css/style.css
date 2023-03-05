@@ -1,0 +1,142 @@
+@import url(./reset.css);
+
+:root {
+  --main-font: "Karla", sans-serif;
+  --background-color:             hsl(204, 43%, 93%);
+  --main-font-color:              hsl(204, 43%, 93%);
+  --community-background-color:   hsl(0, 0%, 100%);
+  --commmunity-font-color:        hsl(218, 22%, 67%);
+  --subscription-background-color:hsl(179, 62%, 43%);
+  --button-font-color:            hsl(179, 62%, 43%);
+  --button-background-color:      hsl(71, 73%, 54%);
+  --info-background-color:        hsl(179, 47%, 52%);
+  --price-font-color:             hsl(183, 74%, 73%);
+  --h1-color:                     hsl(179, 62%, 43%);
+  --h2-color:                     hsl(71, 73%, 54%);
+}
+
+/*main styling*/
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--main-font);
+  color: var(--main-font-color);
+  background-color: var(--background-color);
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  max-width: 63.5rem;
+  margin-top: 10rem;
+  filter: drop-shadow(5px 5px 5px #ccd6ec);
+}
+
+/*community container styling*/
+.community-container {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  color: var(--commmunity-font-color);
+  background-color: var(--community-background-color);
+  padding: 3.6rem 4rem 4.2rem 4rem;
+  border-radius: 8px 8px 0 0;
+}
+h1 {
+  color: var(--h1-color);
+}
+h2 {
+  color: var(--h2-color);
+  font-size: 1.8rem;
+  margin: 1.8rem 0 1rem 0;
+}
+
+/*subscription container styling*/
+.subscription-container {
+  grid-column: 1 / 2;
+  grid-row: 2;
+  background-color: var(--subscription-background-color);
+  padding: 3.7rem 4rem 4rem 4rem;
+  border-bottom-left-radius: 8px;
+}
+h3 {
+  font-size: 1.8rem;
+}
+.price {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 3.2rem;
+  margin-top: 1rem;
+}
+.subscription-cost {
+  color: var(--price-font-color);
+  font-size: 1.6rem;
+  font-weight: lighter;
+  padding-left: 1.1rem;
+}
+
+/*subscription button styling*/
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  height: 4.8rem;
+  width: 100%;
+  color: var(--main-font-color);
+  background-color: var(--button-background-color);
+  font-weight: 700;
+  border-radius: 5px;
+  margin-top: 2.8rem;
+}
+.button:hover {
+  color: var(--button-font-color);
+  background-color: var(--main-font-color);
+}
+
+/*info container styling*/
+.info-container {
+  grid-column: 2 / 3;
+  grid-row: 2;
+  background-color: var(--info-background-color);
+  padding: 4rem 0 4rem 4rem;
+  border-bottom-right-radius: 8px;
+}
+.info-list {
+  margin-top: 1.6rem;
+}
+.info-bullets {
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+/*mobile screensize media query's*/
+@media screen and (max-width: 600px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    grid-auto-rows: minmax(100px, auto);
+    max-width: 31rem;
+    margin-top: 10rem;
+  }
+  .community-container {
+    grid-column: 1 / 1;
+    grid-row: 1;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .subscription-container {
+    grid-column: 1 / 1;
+    grid-row: 2;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    border-bottom-left-radius: 0;
+  }
+  .info-container {
+    grid-column: 1 / 1;
+    grid-row: 3;
+    border-bottom-left-radius: 8px;
+  }
+}
